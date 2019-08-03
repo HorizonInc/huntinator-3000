@@ -1,6 +1,7 @@
 const express = require('express');
-
 const app = express();
+
+app.use(express.static('../web/build'));
 
 //Route includes
 require("./routes/home.js");
