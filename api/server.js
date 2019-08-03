@@ -1,12 +1,21 @@
-const express = require('express');
+import express from 'express';
+import googleMapsClient from '@google/maps';
+
+import riddle from __dirname + '/routes/riddle.js';
+
 const app = express();
 
 app.use(express.static('../web/build'));
 
-//Route includes
-require('./routes/riddle.js')(app);
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log('Server is listening on port: ', port);
+googleMapsClient.createClient({
+    key: process.env.G_MAPS_API_KEY
 });
+
+const PORT = process.env.PORT || 3000;
+app.listen(port, () => { console.log(`Server is listening on port: ${PORT} (http://localhost:${PORT}/)`) });
+
+app.use('/riddle', riddle);
+
+export {
+    googleMapsClient
+};

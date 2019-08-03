@@ -1,0 +1,424 @@
+{  
+    "places":[  
+       {  
+          "location":{  
+             "lat":50.82640269999999,
+             "lng":-0.1757227
+          },
+          "name":"Brighton Youth Hostel"
+       },
+       {  
+          "location":{  
+             "lat":50.8252765,
+             "lng":-0.1750007
+          },
+          "name":"Smart Sea View Brighton"
+       },
+       {  
+          "location":{  
+             "lat":50.8261237,
+             "lng":-0.1706939
+          },
+          "name":"Langfords Hotel"
+       },
+       {  
+          "location":{  
+             "lat":50.8241543,
+             "lng":-0.1584683
+          },
+          "name":"Brunswick Square Hotel"
+       },
+       {  
+          "location":{  
+             "lat":50.8289296,
+             "lng":-0.1678027
+          },
+          "name":"The Courtlands Hotel"
+       },
+       {  
+          "location":{  
+             "lat":50.8260641,
+             "lng":-0.1819073
+          },
+          "name":"Best Western Princes Marine Hotel"
+       },
+       {  
+          "location":{  
+             "lat":50.8343948,
+             "lng":-0.1610237
+          },
+          "name":"At Wilbury"
+       },
+       {  
+          "location":{  
+             "lat":50.8246472,
+             "lng":-0.1659898
+          },
+          "name":"Imperial Hotel"
+       },
+       {  
+          "location":{  
+             "lat":50.8303075,
+             "lng":-0.1733582
+          },
+          "name":"Clarks Shoes"
+       },
+       {  
+          "location":{  
+             "lat":50.82754629999999,
+             "lng":-0.1705838
+          },
+          "name":"Hamptons International Estate Agents Brighton and Hove"
+       },
+       {  
+          "location":{  
+             "lat":50.8322498,
+             "lng":-0.1607768
+          },
+          "name":"CRI St Thomas Fund"
+       },
+       {  
+          "location":{  
+             "lat":50.83269780000001,
+             "lng":-0.1624911
+          },
+          "name":"British Study Centres Brighton"
+       },
+       {  
+          "location":{  
+             "lat":50.8290236,
+             "lng":-0.1739335
+          },
+          "name":"William Hill"
+       },
+       {  
+          "location":{  
+             "lat":50.8286082,
+             "lng":-0.1736738
+          },
+          "name":"Ladbrokes"
+       },
+       {  
+          "location":{  
+             "lat":50.825121,
+             "lng":-0.15642
+          },
+          "name":"Seadragon Backpackers Hostel"
+       },
+       {  
+          "location":{  
+             "lat":50.827409,
+             "lng":-0.156587
+          },
+          "name":"Bodhisattva Buddhist Centre, Brighton, Meditation Classes and Retreat"
+       },
+       {  
+          "location":{  
+             "lat":50.8294163,
+             "lng":-0.1729061
+          },
+          "name":"LSI Brighton - Ventnor Villas Campus"
+       },
+       {  
+          "location":{  
+             "lat":50.8246067,
+             "lng":-0.1573939
+          },
+          "name":"The Old Market"
+       },
+       {  
+          "location":{  
+             "lat":50.823497,
+             "lng":-0.1573075
+          },
+          "name":"The Southern Belle"
+       },
+       {  
+          "location":{  
+             "lat":50.8274118,
+             "lng":-0.1749257
+          },
+          "name":"Seafield Guest House"
+       },
+       {  
+          "location":{  
+             "lat":50.8286943,
+             "lng":-0.177186
+          },
+          "name":"Optimax Laser Eye Surgery - Brighton"
+       },
+       {  
+          "location":{  
+             "lat":50.8282891,
+             "lng":-0.1764654
+          },
+          "name":"ASC Finance for Business, Sussex"
+       },
+       {  
+          "location":{  
+             "lat":50.8263531,
+             "lng":-0.1666715
+          },
+          "name":"The Claremont"
+       },
+       {  
+          "location":{  
+             "lat":50.8287492,
+             "lng":-0.1764353
+          },
+          "name":"Tesco Mobile Phone Shop"
+       },
+       {  
+          "location":{  
+             "lat":50.82913,
+             "lng":-0.1739598
+          },
+          "name":"M&Co."
+       },
+       {  
+          "location":{  
+             "lat":50.82554799999999,
+             "lng":-0.157217
+          },
+          "name":"brandvaughan"
+       },
+       {  
+          "location":{  
+             "lat":50.8258354,
+             "lng":-0.1591766
+          },
+          "name":"Yifang Overseas Serving"
+       },
+       {  
+          "location":{  
+             "lat":50.82853170000001,
+             "lng":-0.1678758
+          },
+          "name":"Albany Hotel"
+       },
+       {  
+          "location":{  
+             "lat":50.8309694,
+             "lng":-0.163608
+          },
+          "name":"Sussex County Cricket Club"
+       },
+       {  
+          "location":{  
+             "lat":50.8286901,
+             "lng":-0.1770792
+          },
+          "name":"Hove Tandoori"
+       },
+       {  
+          "location":{  
+             "lat":50.82855420000001,
+             "lng":-0.170462
+          },
+          "name":"Brighton & Hove City Council"
+       },
+       {  
+          "location":{  
+             "lat":50.83397100000001,
+             "lng":-0.1714946
+          },
+          "name":"Jays"
+       },
+       {  
+          "location":{  
+             "lat":50.8334138,
+             "lng":-0.1740884
+          },
+          "name":"The Exchange"
+       },
+       {  
+          "location":{  
+             "lat":50.82529029999999,
+             "lng":-0.1711069
+          },
+          "name":"Pembroke"
+       },
+       {  
+          "location":{  
+             "lat":50.8241747,
+             "lng":-0.1625648
+          },
+          "name":"The Brunswick"
+       },
+       {  
+          "location":{  
+             "lat":50.8304582,
+             "lng":-0.1728774
+          },
+          "name":"O2 Shop Hove"
+       },
+       {  
+          "location":{  
+             "lat":50.8269349,
+             "lng":-0.1587747
+          },
+          "name":"M Haines Pest Control Services"
+       },
+       {  
+          "location":{  
+             "lat":50.8334256,
+             "lng":-0.163731
+          },
+          "name":"Tinies Brighton & Sussex"
+       },
+       {  
+          "location":{  
+             "lat":50.8252641,
+             "lng":-0.1791988
+          },
+          "name":"King Alfred Leisure Centre"
+       },
+       {  
+          "location":{  
+             "lat":50.8254309,
+             "lng":-0.1600477
+          },
+          "name":"The Bow Street Runner"
+       },
+       {  
+          "location":{  
+             "lat":50.8286943,
+             "lng":-0.177186
+          },
+          "name":"Optimax Laser Eye Surgery - Brighton"
+       },
+       {  
+          "location":{  
+             "lat":50.8282891,
+             "lng":-0.1764654
+          },
+          "name":"ASC Finance for Business, Sussex"
+       },
+       {  
+          "location":{  
+             "lat":50.8263531,
+             "lng":-0.1666715
+          },
+          "name":"The Claremont"
+       },
+       {  
+          "location":{  
+             "lat":50.8287492,
+             "lng":-0.1764353
+          },
+          "name":"Tesco Mobile Phone Shop"
+       },
+       {  
+          "location":{  
+             "lat":50.82913,
+             "lng":-0.1739598
+          },
+          "name":"M&Co."
+       },
+       {  
+          "location":{  
+             "lat":50.82554799999999,
+             "lng":-0.157217
+          },
+          "name":"brandvaughan"
+       },
+       {  
+          "location":{  
+             "lat":50.8258354,
+             "lng":-0.1591766
+          },
+          "name":"Yifang Overseas Serving"
+       },
+       {  
+          "location":{  
+             "lat":50.82853170000001,
+             "lng":-0.1678758
+          },
+          "name":"Albany Hotel"
+       },
+       {  
+          "location":{  
+             "lat":50.8309694,
+             "lng":-0.163608
+          },
+          "name":"Sussex County Cricket Club"
+       },
+       {  
+          "location":{  
+             "lat":50.8286901,
+             "lng":-0.1770792
+          },
+          "name":"Hove Tandoori"
+       },
+       {  
+          "location":{  
+             "lat":50.82855420000001,
+             "lng":-0.170462
+          },
+          "name":"Brighton & Hove City Council"
+       },
+       {  
+          "location":{  
+             "lat":50.83397100000001,
+             "lng":-0.1714946
+          },
+          "name":"Jays"
+       },
+       {  
+          "location":{  
+             "lat":50.8334138,
+             "lng":-0.1740884
+          },
+          "name":"The Exchange"
+       },
+       {  
+          "location":{  
+             "lat":50.82529029999999,
+             "lng":-0.1711069
+          },
+          "name":"Pembroke"
+       },
+       {  
+          "location":{  
+             "lat":50.8241747,
+             "lng":-0.1625648
+          },
+          "name":"The Brunswick"
+       },
+       {  
+          "location":{  
+             "lat":50.8304582,
+             "lng":-0.1728774
+          },
+          "name":"O2 Shop Hove"
+       },
+       {  
+          "location":{  
+             "lat":50.8269349,
+             "lng":-0.1587747
+          },
+          "name":"M Haines Pest Control Services"
+       },
+       {  
+          "location":{  
+             "lat":50.8334256,
+             "lng":-0.163731
+          },
+          "name":"Tinies Brighton & Sussex"
+       },
+       {  
+          "location":{  
+             "lat":50.8252641,
+             "lng":-0.1791988
+          },
+          "name":"King Alfred Leisure Centre"
+       },
+       {  
+          "location":{  
+             "lat":50.8254309,
+             "lng":-0.1600477
+          },
+          "name":"The Bow Street Runner"
+       }
+    ]
+ }
