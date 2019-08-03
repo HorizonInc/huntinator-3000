@@ -1,18 +1,19 @@
 #!/bin/bash
 
-# Go into web folder and run fresh install
-cd web
-rm -rf ./node_modules
-yarn install
+COMMIT_MSG=$1
 
 # Build web app 
 yarn run build
 
-# Commit changes and push to Master
+# Commit changes and push to master
+git add ./build/*
+git commit -m "DEPLOY - $COMMIT_MSG" 
+git push origin master
 
+# Change to release branch and merge master
+git checkout release
+git merge master
 
-# Change to release branch
-
-# Merge master changes
-
-# Commit changes and push to release
+# Push to release and go back to master
+git push origin release
+git checkout master
