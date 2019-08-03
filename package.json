@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "start": "bash ./scripts/build_and_run.sh"
+    "start": "bash ./scripts/run_server.sh"
   }
 }
