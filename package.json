@@ -1,5 +1,5 @@
 {
-  "dependencies": {
-    "express": "^4.17.1"
+  "scripts": {
+    "start": "bash ./scripts/build_and_run.sh"
   }
 }
