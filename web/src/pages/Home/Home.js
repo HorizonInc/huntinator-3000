@@ -4,20 +4,22 @@ import React, { Component } from 'react';
 import Button from '../../components/Button';
 
 // Local Relatives
-import styles from './style';
+import styles from './Home.style';
 
-class App extends Component {
+class Home extends Component {
     render() {
         return (
             <div style={styles.container}>
                 <h1>Hello World</h1>
+                <h5>~ from the home screen!</h5>
                 <Button
                     text={'Hiya!'}
                     style={styles.button}
+                    onPress={() => alert('button pressed')}
                 />
             </div>
         );
     }
 }
 
-export default App;
+export default Home;

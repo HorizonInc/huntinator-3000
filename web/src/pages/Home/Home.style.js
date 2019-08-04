@@ -2,9 +2,7 @@ const styles = {
     container: {
         color: 'red',
     },
-    button: {
-        
-    },
+    button: {},
 };
 
 export default styles;
