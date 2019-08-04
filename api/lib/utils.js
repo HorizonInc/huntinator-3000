@@ -7,21 +7,33 @@ function getPlacesList(lat, lng, radius) {
 }
 
 function getRandomRiddle() {
-    const raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
+    try {
+        const raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
+    } catch {
+        console.log("The riddles json file could not be read.");
+        return null;
+    }
+    
     const riddles = JSON.parse(raw_JSON).riddles;
     const max = 129;
 
-    let position = Math.round(Math.random() * max);
+    let position = Math.floor(Math.random() * max);
 
     return riddles[position];
 }
 
 function getRandomPlace() {
-    const raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
+    try {
+        const raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
+    } catch {
+        console.log("The Places json file could not be read.");
+        return null
+    }
+
     const places_object = JSON.parse(raw_places_JSON);
     const max = 60;
 
-    let position = Math.round(Math.random() * max);
+    let position = Math.floor(Math.random() * max);
 
     return places_object.places[position];
 }
