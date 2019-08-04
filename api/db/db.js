@@ -5,3 +5,7 @@ mongoose.connect('mongodb+srv://huntinator_server:UYjTXTeo6xyxrGUV@huntinator-cr
 });
 
 console.log('Connected to the Mongodb database');
+
+export {
+    mongoose
+}
