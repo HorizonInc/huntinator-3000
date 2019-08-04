@@ -1,7 +1,7 @@
 import express from 'express';
 import googleMapsClient from '@google/maps';
 
-import riddle from __dirname + '/routes/riddle.js';
+import riddle from './routes/riddle.js';
 
 const app = express();
 
@@ -12,7 +12,7 @@ googleMapsClient.createClient({
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(port, () => { console.log(`Server is listening on port: ${PORT} (http://localhost:${PORT}/)`) });
+app.listen(PORT, () => { console.log(`Server is listening on port: ${PORT} (http://localhost:${PORT}/)`) });
 
 app.use('/riddle', riddle);
 
