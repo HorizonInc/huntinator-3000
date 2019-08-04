@@ -2,7 +2,8 @@ import express from 'express';
 import googleMapsClient from '@google/maps';
 import mongoose from './db/db.js';
 
-import riddle from './routes/riddle.js';
+import riddle from './test-routes/riddle.js';
+import gameGeneration from './routes/generateNewGame.js';
 
 const app = express();
 
@@ -16,6 +17,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => { console.log(`Server is listening on port: ${PORT} (http://localhost:${PORT}/)`) });
 
 app.use('/riddle', riddle);
+app.use(gameGeneration);
 
 export {
     googleMapsClient

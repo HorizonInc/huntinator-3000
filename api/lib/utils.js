@@ -7,12 +7,14 @@ function getPlacesList(lat, lng, radius) {
 }
 
 function getRandomRiddle() {
-    try {
-        const raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
-    } catch {
-        console.log("The riddles json file could not be read.");
-        return null;
-    }
+    const raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
+
+    // try {
+    //     raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
+    // } catch {
+    //     console.log("The riddles json file could not be read.");
+    //     return null;
+    // }
     
     const riddles = JSON.parse(raw_JSON).riddles;
     const max = 129;
@@ -23,12 +25,14 @@ function getRandomRiddle() {
 }
 
 function getRandomPlace() {
-    try {
-        const raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
-    } catch {
-        console.log("The Places json file could not be read.");
-        return null
-    }
+    const raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
+
+    // try {
+    //     raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
+    // } catch {
+    //     console.log("The Places json file could not be read.");
+    //     return null
+    // }
 
     const places_object = JSON.parse(raw_places_JSON);
     const max = 60;
@@ -36,6 +40,12 @@ function getRandomPlace() {
     let position = Math.floor(Math.random() * max);
 
     return places_object.places[position];
+}
+
+function genGameId() {
+    let max = 90000;
+
+    return Math.floor(Math.random() * max) + 10000;
 }
 
 /*
@@ -65,11 +75,13 @@ function genRoute(number_of_questions, location) {
         route_array.push(pointObject);
     }
 
+    console.log(route_array);
     return route_array;
 }
 
 export {
     getRandomRiddle,
     getPlacesList,
+    genGameId,
     genRoute
 };
