@@ -1,15 +1,11 @@
-const fs = require('fs');
-const raw_JSON = fs.readFileSync(__dirname + '/riddles.json');
-const riddles = JSON.parse(raw_JSON).riddles;
-const max = 129;
+import fs from 'fs';
+import express from 'express';
+import { genRoute } from '../lib/utils.js';
 
+const router = express.Router();
 
-module.exports = (app) => {
-    app.get('/randomRiddle', (req, res) => {
-        let position = Math.round(Math.random() * max);
+router.get('/testGenRoute', (req, res) => {
+    console.log("The route array: ", genRoute(20, {}));
+})
 
-        res.status(200).json({
-            riddle: riddles[position]
-        })
-    })
-}
+export default router;
