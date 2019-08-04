@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-// Local
+// Components
+import Button from '../../components/Button';
+
+// Local Relatives
 import styles from './style';
 
 class App extends Component {
@@ -8,6 +11,10 @@ class App extends Component {
         return (
             <div style={styles.container}>
                 <h1>Hello World</h1>
+                <Button
+                    text={'Hiya!'}
+                    style={styles.button}
+                />
             </div>
         );
     }
