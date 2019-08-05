@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb+srv://huntinator_server:UYjTXTeo6xyxrGUV@huntinator-crnnx.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true }, err => {
-    if(err) console.log(err);
-});
+const db_srv_url = 'mongodb+srv://huntinator_server:' + process.env.SRV_PASS + '@huntinator-crnnx.mongodb.net/test?retryWrites=true&w=majority'
 
-console.log('Connected to the Mongodb database');
+mongoose.connect(db_srv_url, { useNewUrlParser: true }).then(
+    () => { console.log('Connected to the Huntinator Mongodb database'); },
+    err => { console.log('There was an error connecting to the Huntinator Mongodb database: ', err); }
+);
+
 
 export {
     mongoose
