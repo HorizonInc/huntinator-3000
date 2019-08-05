@@ -10,13 +10,18 @@ class Home extends Component {
     render() {
         return (
             <div style={styles.container}>
-                <h1>Hello World</h1>
-                <h5>~ from the home screen!</h5>
-                <Button
-                    text={'Hiya!'}
-                    style={styles.button}
-                    onPress={() => alert('button pressed')}
-                />
+                <div style={styles.heading}>
+                    <h1 style={styles.headingText}>Huntinator</h1>
+                    <h1 style={styles.headingText}>3000</h1>
+                </div>
+
+                <div style={styles.generateBtnContainer}>
+                    <Button
+                        text={'Generate New Game'}
+                        style={styles.generateBtn}
+                        onPress={() => alert('button pressed')}
+                    />
+                </div>
             </div>
         );
     }
