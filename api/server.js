@@ -1,5 +1,6 @@
 import express from 'express';
 import googleMapsClient from '@google/maps';
+import mongoose from './db/db.js';
 
 import riddle from './routes/riddle.js';
 
