@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import { genRoute, genGameId } from '../lib/utils.js'; 
 import { Hunt } from '../db/models.js';
 
+
 const jsonParser = bodyParser.json();
 
 const router = express.Router();
