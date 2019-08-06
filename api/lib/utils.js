@@ -7,7 +7,6 @@ function getPlacesList(lat, lng, radius) {
 }
 
 function getRandomRiddle() {
-<<<<<<< HEAD
     let raw_JSON = {};
 
     try {
@@ -16,16 +15,6 @@ function getRandomRiddle() {
         console.log("The riddles json file could not be read.");
         return null;
     }
-=======
-    const raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
-
-    // try {
-    //     raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
-    // } catch {
-    //     console.log("The riddles json file could not be read.");
-    //     return null;
-    // }
->>>>>>> 6bd6f7ddb6c89c0ea0b70e30cd8641477edb179a
     
     const riddles = JSON.parse(raw_JSON).riddles;
     const max = 129;
@@ -36,7 +25,6 @@ function getRandomRiddle() {
 }
 
 function getRandomPlace() {
-<<<<<<< HEAD
     let raw_places_JSON = {};
 
     try {
@@ -45,16 +33,6 @@ function getRandomPlace() {
         console.log("The Places json file could not be read.");
         return null
     }
-=======
-    const raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
-
-    // try {
-    //     raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
-    // } catch {
-    //     console.log("The Places json file could not be read.");
-    //     return null
-    // }
->>>>>>> 6bd6f7ddb6c89c0ea0b70e30cd8641477edb179a
 
     const places_object = JSON.parse(raw_places_JSON);
     const max = 60;
