@@ -4,7 +4,6 @@ import bodyParser from 'body-parser';
 import { genRoute, genGameId } from '../lib/utils.js'; 
 import { Hunt } from '../db/models.js';
 
-
 const jsonParser = bodyParser.json();
 
 const router = express.Router();
@@ -23,9 +22,11 @@ router.post('/newGame', jsonParser, (req, res) => {
 
     const newHunt = new Hunt(responseObject);
 
-    Hunts.save().then((result) => {
+    newHunt.save().then((result) => {
 
         res.status(200).json({
+            status: "OK",
+            message: "Hunt generated and saved!",
             new_game_object: responseObject
         }).end();
 

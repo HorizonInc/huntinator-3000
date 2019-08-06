@@ -1,9 +1,12 @@
 import express from 'express';
 import googleMapsClient from '@google/maps';
 import mongoose from './db/db.js';
+import dotenv from 'dotenv';
 
 import riddle from './test-routes/riddle.js';
 import gameGeneration from './routes/generateNewGame.js';
+
+dotenv.config();
 
 const app = express();
 

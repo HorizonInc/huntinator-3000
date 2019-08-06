@@ -75,7 +75,6 @@ function genRoute(number_of_questions, location) {
         route_array.push(pointObject);
     }
 
-    console.log(route_array);
     return route_array;
 }
 
