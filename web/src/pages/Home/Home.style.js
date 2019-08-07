@@ -47,11 +47,9 @@ const styles = {
         width: '100%',
         height: `${GEN_BUTTON_HEIGHT}px`,
         fontSize: '20px',
-        backgroundColor: '#000',
+        padding: 0,
         color: '#fff',
-        outline: 'none',
-        border: 'none',
-        borderRadius: '3px',
+        backgroundColor: '#000',
     },
 };
 

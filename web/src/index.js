@@ -14,10 +14,10 @@ import './index.css';
 class App extends Component {
     render() {
         return (
-                <Router>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/generation/" component={Generation} />
-                </Router>
+            <Router>
+                <Route path="/" exact component={Home} />
+                <Route path="/generation/" component={Generation} />
+            </Router>
         );
     }
 }
