@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
-import { huntSchema } from 'schemas.js';
+import { huntSchema } from './schemas.js';
 
-const Hunts = mongoose.model('Hunts', huntSchema);
+const Hunt = mongoose.model('Hunt', huntSchema, 'Hunt');
 
 export {
-    Hunts
+    Hunt
 }

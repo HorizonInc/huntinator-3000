@@ -7,8 +7,10 @@ function getPlacesList(lat, lng, radius) {
 }
 
 function getRandomRiddle() {
+    let raw_JSON = {};
+
     try {
-        const raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
+        raw_JSON = fs.readFileSync(__dirname + '/../assets/riddles.json');
     } catch {
         console.log("The riddles json file could not be read.");
         return null;
@@ -23,8 +25,10 @@ function getRandomRiddle() {
 }
 
 function getRandomPlace() {
+    let raw_places_JSON = {};
+
     try {
-        const raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
+        raw_places_JSON = fs.readFileSync(__dirname + '/../assets/places.json');
     } catch {
         console.log("The Places json file could not be read.");
         return null
@@ -36,6 +40,12 @@ function getRandomPlace() {
     let position = Math.floor(Math.random() * max);
 
     return places_object.places[position];
+}
+
+function genGameId() {
+    let max = 90000;
+
+    return Math.floor(Math.random() * max) + 10000;
 }
 
 /*
@@ -71,5 +81,6 @@ function genRoute(number_of_questions, location) {
 export {
     getRandomRiddle,
     getPlacesList,
+    genGameId,
     genRoute
 };
