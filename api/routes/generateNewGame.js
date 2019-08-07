@@ -9,13 +9,13 @@ const jsonParser = bodyParser.json();
 const router = express.Router();
 
 router.post('/newGame', jsonParser, (req, res) => {
-    if(req.body.number_of_questions === undefined) { res.status(400).json({error_message: "number_of_questions was not specified"}).end() }
+    if(req.body.number_of_questions === undefined) { 
+        res.status(400).json({error_message: "number_of_questions was not specified"}).end() 
+    }
     //if(req.body.location === undefined) { res.status(400).json({error_message: "The location for the hunt was not specified"}).end() } Not needed right now as only doing Brighton to start
 
-    const number_of_questions = req.body.number_of_questions;
-
     const responseObject = {
-        route: genRoute(number_of_questions, {}), // Second @param of the genRoute function is left blank for now as API only works for Brighton and Hove
+        route: genRoute(req.body.number_of_questions, {}), // Second @param of the genRoute function is left blank for now as API only works for Brighton and Hove
         huntId: genGameId(),
         teams: [] // Left as a blank array during generation - will be filled dynamically as players join/leave
     }

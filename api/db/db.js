@@ -1,7 +1,4 @@
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const db_srv_url = 'mongodb+srv://huntinator_server:' + process.env.SRV_PASS + '@huntinator-crnnx.mongodb.net/test?retryWrites=true&w=majority';
 
