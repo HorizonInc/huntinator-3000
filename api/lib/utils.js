@@ -49,6 +49,11 @@ function genGameId() {
     return Math.floor(Math.random() * max) + 10000;
 }
 
+function genTeamId() {
+    let max = 900000;
+    return Math.floor(Math.random() * max) + 100000;
+}
+
 /*
 This is the function that will return the final Route array.
 
@@ -83,5 +88,6 @@ export {
     getRandomRiddle,
     getPlacesList,
     genGameId,
+    genTeamId,
     genRoute
 };
