@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -24,7 +26,7 @@ var _generateNewGame = _interopRequireDefault(require("./routes/generateNewGame.
 
 var _joinGame = _interopRequireDefault(require("./routes/joinGame.js"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _getNextQuestion = _interopRequireDefault(require("./routes/getNextQuestion.js"));
 
 _dotenv["default"].config();
 
@@ -42,3 +44,4 @@ app.listen(PORT, function () {
 app.use('/riddle', _riddle["default"]);
 app.use(_generateNewGame["default"]);
 app.use(_joinGame["default"]);
+app.use(_getNextQuestion["default"]);

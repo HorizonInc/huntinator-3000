@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -12,8 +14,6 @@ var _bodyParser = _interopRequireDefault(require("body-parser"));
 var _utils = require("../lib/utils.js");
 
 var _models = require("../db/models.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var jsonParser = _bodyParser["default"].json();
 

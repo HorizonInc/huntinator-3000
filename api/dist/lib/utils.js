@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -13,8 +15,6 @@ var _server = require("../server");
 var _axios = _interopRequireDefault(require("axios"));
 
 var _fs = _interopRequireDefault(require("fs"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function getPlacesList(lat, lng, radius) {// This is where you should write the code for your ticket Tanjil
 }
