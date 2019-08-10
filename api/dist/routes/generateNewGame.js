@@ -30,7 +30,7 @@ router.post('/newGame', jsonParser, function (req, res) {
   var responseObject = {
     route: (0, _utils.genRoute)(req.body.number_of_questions, {}),
     // Second @param of the genRoute function is left blank for now as API only works for Brighton and Hove
-    huntId: (0, _utils.genGameId)(),
+    huntId: (0, _utils.genId)(90000, 10000),
     teams: [] // Left as a blank array during generation - will be filled dynamically as players join/leave
 
   };

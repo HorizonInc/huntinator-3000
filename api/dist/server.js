@@ -22,6 +22,8 @@ var _riddle = _interopRequireDefault(require("./test-routes/riddle.js"));
 
 var _generateNewGame = _interopRequireDefault(require("./routes/generateNewGame.js"));
 
+var _joinGame = _interopRequireDefault(require("./routes/joinGame.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 _dotenv["default"].config();
@@ -39,3 +41,4 @@ app.listen(PORT, function () {
 });
 app.use('/riddle', _riddle["default"]);
 app.use(_generateNewGame["default"]);
+app.use(_joinGame["default"]);
