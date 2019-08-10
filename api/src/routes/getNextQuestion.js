@@ -50,8 +50,6 @@ router.post('/nextQuestion', jsonParser, async (req, res) => {
 
     let targetTeam = huntObject.teams.find(team => team.teamId === reqObject.team_id);
     let targetTeamIndex = huntObject.teams.findIndex(() => targetTeam);
-
-    console.log(targetTeam.node_number)
     
     targetTeam.node_number++;
     huntObject.teams[targetTeamIndex] = targetTeam;
@@ -63,8 +61,6 @@ router.post('/nextQuestion', jsonParser, async (req, res) => {
         answer: huntObject.route[currentTeamNodeNumber].puzzle.answer,
         coordinates: huntObject.route[currentTeamNodeNumber].location
     }
-
-    console.log(huntObject.teams);
 
     huntObject.markModified('teams');
     huntObject.save()
