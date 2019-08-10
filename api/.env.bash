@@ -1,1 +1,1 @@
-export SRV_PASS='TXsvrGPXGevdaPoi'
+export SRV_PASS=''
