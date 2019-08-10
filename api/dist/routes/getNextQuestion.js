@@ -63,14 +63,14 @@ router.post('/nextQuestion', jsonParser,
 function () {
   var _ref = (0, _asyncToGenerator2["default"])(
   /*#__PURE__*/
-  _regenerator["default"].mark(function _callee(req, res) {
-    var reqObject, huntObject, targetTeam;
-    return _regenerator["default"].wrap(function _callee$(_context) {
+  _regenerator["default"].mark(function _callee2(req, res) {
+    var reqObject, huntObject, targetTeam, targetTeamIndex, currentTeamNodeNumber, responseObject;
+    return _regenerator["default"].wrap(function _callee2$(_context2) {
       while (1) {
-        switch (_context.prev = _context.next) {
+        switch (_context2.prev = _context2.next) {
           case 0:
             reqObject = req.body;
-            _context.next = 3;
+            _context2.next = 3;
             return findGame(reqObject.game_id).then(function (hunt) {
               return hunt;
             })["catch"](function (e) {
@@ -80,19 +80,58 @@ function () {
             });
 
           case 3:
-            huntObject = _context.sent;
+            huntObject = _context2.sent;
             targetTeam = huntObject.teams.find(function (team) {
               return team.teamId === reqObject.team_id;
             });
-            console.log("Target team: ", targetTeam);
-            console.log(huntObject.route[0].puzzle);
+            targetTeamIndex = huntObject.teams.findIndex(function () {
+              return targetTeam;
+            });
+            targetTeam.node_number++;
+            huntObject.teams[targetTeamIndex] = targetTeam;
+            currentTeamNodeNumber = targetTeam.node_number;
+            responseObject = {
+              question: huntObject.route[currentTeamNodeNumber].puzzle.question,
+              answer: huntObject.route[currentTeamNodeNumber].puzzle.answer,
+              coordinates: huntObject.route[currentTeamNodeNumber].location
+            };
+            huntObject.markModified('teams');
+            huntObject.save().then(
+            /*#__PURE__*/
+            function () {
+              var _ref2 = (0, _asyncToGenerator2["default"])(
+              /*#__PURE__*/
+              _regenerator["default"].mark(function _callee(result) {
+                return _regenerator["default"].wrap(function _callee$(_context) {
+                  while (1) {
+                    switch (_context.prev = _context.next) {
+                      case 0:
+                        res.status(200).json(responseObject).end();
 
-          case 7:
+                      case 1:
+                      case "end":
+                        return _context.stop();
+                    }
+                  }
+                }, _callee);
+              }));
+
+              return function (_x3) {
+                return _ref2.apply(this, arguments);
+              };
+            }())["catch"](function (e) {
+              console.log(e);
+              res.status(500).json({
+                error_message: e
+              }).end();
+            });
+
+          case 12:
           case "end":
-            return _context.stop();
+            return _context2.stop();
         }
       }
-    }, _callee);
+    }, _callee2);
   }));
 
   return function (_x, _x2) {
