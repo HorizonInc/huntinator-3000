@@ -2,6 +2,7 @@ import express from 'express';
 import googleMapsClient from '@google/maps';
 import mongoose from './db/db.js';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 import riddle from './test-routes/riddle.js';
 import gameGeneration from './routes/generateNewGame.js';
@@ -13,6 +14,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.static('../web/build'));
+app.use(cors());
 
 googleMapsClient.createClient({
     key: process.env.G_MAPS_API_KEY
