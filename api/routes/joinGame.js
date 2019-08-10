@@ -1,6 +1,6 @@
 import express from 'express';
 import { Hunt } from '../db/models.js';
-import { genTeamId } from '../lib/utils.js';
+import { genId } from '../lib/utils.js';
 
 const router = express.Router();
 
@@ -19,7 +19,8 @@ async function findHunt(hunt_id) {
 router.get('/joinGame', async (req, res) => {
     let game_id = req.query.game_id;
 
-    let hunt_object = await findHunt(game_id).then((hunt) => hunt)
+    let hunt_object = await findHunt(game_id)
+        .then((hunt) => hunt)
         .catch(e => {
             console.log(e);
             hunt_object = e;
@@ -27,7 +28,7 @@ router.get('/joinGame', async (req, res) => {
 
 
     let newTeam = {
-        teamId: genTeamId(),
+        teamId: genId(900000, 100000),
         gameId: game_id,
         node_number: 0,
         position: -1 // -1 means that the game hasn't started yet so no position has been assigned

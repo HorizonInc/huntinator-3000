@@ -1,6 +1,5 @@
 import { googleMapsClient } from "../server";
 import axios from 'axios';
-import _ from 'lodash';
 import fs from 'fs';
 
 function getPlacesList(lat, lng, radius) {
@@ -43,15 +42,8 @@ function getRandomPlace() {
     return places_object.places[position];
 }
 
-function genGameId() {
-    let max = 90000;
-
-    return Math.floor(Math.random() * max) + 10000;
-}
-
-function genTeamId() {
-    let max = 900000;
-    return Math.floor(Math.random() * max) + 100000;
+function genId(max, addition) {
+    return Math.floor(Math.random() * max) + addition;
 }
 
 /*
@@ -87,7 +79,6 @@ function genRoute(number_of_questions, location) {
 export {
     getRandomRiddle,
     getPlacesList,
-    genGameId,
-    genTeamId,
+    genId,
     genRoute
 };

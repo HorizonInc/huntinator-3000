@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
-import { genRoute, genGameId } from '../lib/utils.js'; 
+import { genRoute, genId } from '../lib/utils.js'; 
 import { Hunt } from '../db/models.js';
 
 const jsonParser = bodyParser.json();
@@ -16,7 +16,7 @@ router.post('/newGame', jsonParser, (req, res) => {
 
     const responseObject = {
         route: genRoute(req.body.number_of_questions, {}), // Second @param of the genRoute function is left blank for now as API only works for Brighton and Hove
-        huntId: genGameId(),
+        huntId: genId(90000, 10000),
         teams: [] // Left as a blank array during generation - will be filled dynamically as players join/leave
     }
 
