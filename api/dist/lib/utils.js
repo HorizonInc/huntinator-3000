@@ -1,11 +1,13 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getRandomRiddle = getRandomRiddle;
 exports.getPlacesList = getPlacesList;
-exports.genGameId = genGameId;
+exports.genId = genId;
 exports.genRoute = genRoute;
 
 var _server = require("../server");
@@ -13,8 +15,6 @@ var _server = require("../server");
 var _axios = _interopRequireDefault(require("axios"));
 
 var _fs = _interopRequireDefault(require("fs"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function getPlacesList(lat, lng, radius) {// This is where you should write the code for your ticket Tanjil
 }
@@ -51,9 +51,8 @@ function getRandomPlace() {
   return places_object.places[position];
 }
 
-function genGameId() {
-  var max = 90000;
-  return Math.floor(Math.random() * max) + 10000;
+function genId(max, addition) {
+  return Math.floor(Math.random() * max) + addition;
 }
 /*
 This is the function that will return the final Route array.

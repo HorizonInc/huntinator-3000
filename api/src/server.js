@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import riddle from './test-routes/riddle.js';
 import gameGeneration from './routes/generateNewGame.js';
 import joinGame from './routes/joinGame.js';
+import nextQuestion from './routes/getNextQuestion.js';
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.listen(PORT, () => { console.log(`Server is listening on port: ${PORT} (http
 app.use('/riddle', riddle);
 app.use(gameGeneration);
 app.use(joinGame);
+app.use(nextQuestion);
 
 export {
     googleMapsClient
