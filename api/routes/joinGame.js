@@ -28,6 +28,7 @@ router.get('/joinGame', async (req, res) => {
 
     let newTeam = {
         teamId: genTeamId(),
+        gameId: game_id,
         node_number: 0,
         position: -1 // -1 means that the game hasn't started yet so no position has been assigned
     }

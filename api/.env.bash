@@ -1,2 +1,1 @@
-export G_MAPS_API_KEY='AIzaSyCUzkrixzRtFl2ONGySsbr6fA_4AzkCSkU'
 export SRV_PASS='TXsvrGPXGevdaPoi'
