@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
+// Utilities
+import config from '../../utils/config'; 
 
 // Components
 import Button from '../../components/Button';
@@ -7,6 +11,19 @@ import Button from '../../components/Button';
 import styles from './Home.style';
 
 class Home extends Component {
+    onChangeText(gameId) {
+        if (gameId.length >= 5) {
+            const query = `game_id=${gameId}`;
+            const joinGameURL = `${config.apiDomain}/joinGame?${query}`;
+
+            axios.get(joinGameURL)
+                .then(response => {
+                    console.log('process.env: ', process.env.SRV_PASS)
+                })
+                .catch(err => console.log(err));
+        }
+    }
+
     render() {
         const maxGameCodeLength = '5';
 
@@ -20,10 +37,11 @@ class Home extends Component {
                 <div style={styles.gameCodeContainer}>
                     <span style={styles.enterGameCodeText}>enter game code</span>
                     <input
-                        type="number"
-                        name="game_code"
+                        type='number'
+                        name='game_code'
                         style={styles.gameCodeInput}
                         maxLength={maxGameCodeLength}
+                        onChange={(event) => this.onChangeText(event.target.value)}
                     />
                 </div>
 

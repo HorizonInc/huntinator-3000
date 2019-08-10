@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // import * as serviceWorker from './serviceWorker';
 
@@ -15,8 +15,8 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <Route path="/" exact component={Home} />
-                <Route path="/generation/" component={Generation} />
+                <Route path='/' exact component={Home} />
+                <Route path='/generation/' component={Generation} />
             </Router>
         );
     }
