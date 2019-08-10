@@ -8,4 +8,4 @@ rm -rf ./node_modules
 yarn install
 
 # Running server
-yarn start
+yarn run serve
