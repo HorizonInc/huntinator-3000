@@ -5,8 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/server.js",
-    "start-local": "source src/.env.bash && nodemon --exec babel-node src/server.js",
+    "start": "source .env.bash && nodemon --exec babel-node src/server.js",
     "build": "babel src --out-dir dist",
     "serve": "node dist/server.js"
   },
