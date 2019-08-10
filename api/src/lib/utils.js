@@ -42,10 +42,8 @@ function getRandomPlace() {
     return places_object.places[position];
 }
 
-function genGameId() {
-    let max = 90000;
-
-    return Math.floor(Math.random() * max) + 10000;
+function genId(max, addition) {
+    return Math.floor(Math.random() * max) + addition;
 }
 
 /*
@@ -81,6 +79,6 @@ function genRoute(number_of_questions, location) {
 export {
     getRandomRiddle,
     getPlacesList,
-    genGameId,
+    genId,
     genRoute
 };
