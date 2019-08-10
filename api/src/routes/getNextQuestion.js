@@ -54,25 +54,27 @@ router.post('/nextQuestion', jsonParser, async (req, res) => {
     let targetTeamIndex = huntObject.teams.findIndex(() => targetTeam);
     
     if(targetTeam.node_number < endOfRoute) {
-    targetTeam.node_number++;
-    huntObject.teams[targetTeamIndex] = targetTeam;
+        targetTeam.node_number++;
+        huntObject.teams[targetTeamIndex] = targetTeam;
 
-    let currentTeamNodeNumber = targetTeam.node_number;
+        let currentTeamNodeNumber = targetTeam.node_number;
 
-    let responseObject = {
-        question: huntObject.route[currentTeamNodeNumber].puzzle.question,
-        answer: huntObject.route[currentTeamNodeNumber].puzzle.answer,
-        coordinates: huntObject.route[currentTeamNodeNumber].location
-    }
+        let responseObject = {
+            question: huntObject.route[currentTeamNodeNumber].puzzle.question,
+            answer: huntObject.route[currentTeamNodeNumber].puzzle.answer,
+            coordinates: huntObject.route[currentTeamNodeNumber].location
+        }
 
-    huntObject.markModified('teams');
-    huntObject.save()
-        .then(async (result) => {
-            res.status(200).json(responseObject).end();
-        }).catch(e => {
-            console.log(e);
-            res.status(500).json({ error_message: e }).end();
-        });
+        huntObject.markModified('teams');
+        huntObject.save()
+            .then(async (result) => {
+                res.status(200).json(responseObject).end();
+            }).catch(e => {
+                console.log(e);
+                res.status(500).json({ error_message: e }).end();
+            });
+    } else {
+        res.send(200).json({ message: "Your route has finished"})
     }
     
 });
