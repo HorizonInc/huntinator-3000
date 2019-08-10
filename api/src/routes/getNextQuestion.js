@@ -48,9 +48,12 @@ router.post('/nextQuestion', jsonParser, async (req, res) => {
             res.status(400).json({ error_message: e.error_message }).end();
         });
 
+    const endOfRoute = huntObject.route.length;
+
     let targetTeam = huntObject.teams.find(team => team.teamId === reqObject.team_id);
     let targetTeamIndex = huntObject.teams.findIndex(() => targetTeam);
     
+    if(targetTeam.node_number < endOfRoute) {
     targetTeam.node_number++;
     huntObject.teams[targetTeamIndex] = targetTeam;
 
@@ -70,6 +73,7 @@ router.post('/nextQuestion', jsonParser, async (req, res) => {
             console.log(e);
             res.status(500).json({ error_message: e }).end();
         });
+    }
     
 });
 
