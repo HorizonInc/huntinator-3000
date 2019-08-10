@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 // Utilities
-import config from '../../utils/config'; 
+import config from 'utils/config'; 
 
 // Components
-import Button from '../../components/Button';
+import Button from 'components/Button';
 
 // Local Relatives
 import styles from './Home.style';
