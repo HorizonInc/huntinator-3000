@@ -65,7 +65,6 @@ router.post('/nextQuestion', jsonParser, async (req, res) => {
     huntObject.markModified('teams');
     huntObject.save()
         .then(async (result) => {
-            console.log("The node_number after save: ", result.teams[targetTeamIndex].node_number);
             res.status(200).json(responseObject).end();
         }).catch(e => {
             console.log(e);
