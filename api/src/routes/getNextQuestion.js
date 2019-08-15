@@ -60,6 +60,7 @@ router.post('/nextQuestion', jsonParser, async (req, res) => {
         let currentTeamNodeNumber = targetTeam.node_number;
 
         let responseObject = {
+            route_finised: false,
             question: huntObject.route[currentTeamNodeNumber].puzzle.question,
             answer: huntObject.route[currentTeamNodeNumber].puzzle.answer,
             coordinates: huntObject.route[currentTeamNodeNumber].location
@@ -71,10 +72,10 @@ router.post('/nextQuestion', jsonParser, async (req, res) => {
                 res.status(200).json(responseObject).end();
             }).catch(e => {
                 console.log(e);
-                res.status(500).json({ error_message: e }).end();
+                res.status(500).json({ route_finished: false, error_message: e }).end();
             });
     } else {
-        res.send(200).json({ message: "Your route has finished"})
+        res.send(200).json({route_finished: true, message: "Your route has finished"});
     }
     
 });
