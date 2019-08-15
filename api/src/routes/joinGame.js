@@ -24,6 +24,7 @@ router.get('/joinGame', async (req, res) => {
         .catch(e => {
             console.log(e);
             hunt_object = e;
+            res.status(400).json({ error_message: "Game not found! check you have the right ID"});
         });
 
 
