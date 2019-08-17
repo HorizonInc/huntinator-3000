@@ -20,6 +20,8 @@ var _db = _interopRequireDefault(require("./db/db.js"));
 
 var _dotenv = _interopRequireDefault(require("dotenv"));
 
+var _cors = _interopRequireDefault(require("cors"));
+
 var _riddle = _interopRequireDefault(require("./test-routes/riddle.js"));
 
 var _generateNewGame = _interopRequireDefault(require("./routes/generateNewGame.js"));
@@ -32,6 +34,7 @@ _dotenv["default"].config();
 
 var app = (0, _express["default"])();
 app.use(_express["default"]["static"]('../web/build'));
+app.use((0, _cors["default"])());
 
 _maps["default"].createClient({
   key: process.env.G_MAPS_API_KEY
