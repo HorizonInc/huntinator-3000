@@ -4,9 +4,8 @@ import React, { Component } from 'react';
 import styles from './TextInput.style';
 
 class TextInput extends Component {
-
     render() {
-        const { placeHolder, value, style = {}} = this.props;
+        const { placeHolder, value, style = {}, onChange} = this.props;
 
         return(
             <input style={{...styles.textInput, ...style}} 
