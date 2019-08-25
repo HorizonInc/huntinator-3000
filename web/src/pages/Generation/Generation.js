@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 // Components
@@ -21,7 +22,9 @@ class Generation extends Component {
             ocationCoords: {
                 lat: 0.0,
                 lng: 0.0
-            }
+            },
+            huntId: '',
+            redirect: false
         }
     }
 
@@ -40,13 +43,17 @@ class Generation extends Component {
 
         axios.post('http://192.168.1.218:3001/newGame', postObject)
             .then((response) => {
-                console.log(response);
+                this.setState({huntId: '/' + response.data.new_game_object.huntId, redirect: true});
             }).catch(e => {
                 console.log(e);
             })
     }
 
     render() {
+        if(this.state.redirect) {
+            return ( <Redirect to={this.state.huntId} /> );
+        }
+
         return (
             <div style={styles.container}>
                 <div style={styles.titleContainer}>

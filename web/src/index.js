@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // Pages
 import Home from './pages/Home';
 import Generation from './pages/Generation';
+import Lobby from './pages/Lobby';
 
 // Local Relatives
 import './index.css';
@@ -17,6 +18,7 @@ class App extends Component {
             <Router>
                 <Route path="/" exact component={Home} />
                 <Route path="/generation/" component={Generation} />
+                <Route path='/:hunt_id' component={Lobby} />
             </Router>
         );
     }
