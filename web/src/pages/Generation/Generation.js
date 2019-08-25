@@ -11,17 +11,21 @@ class Generation extends Component {
     constructor(props) {
         super(props);
 
-        this.generatedGameId = 0;
-        this.location = "";
-        this.numberOfQuestions = 10;
-        this.locationCoords = {
-            lat: 0.0,
-            lng: 0.0
+        this.state = {
+            inputValue: "",
+            generatedGameId: 0,
+            location: "",
+            numberOfQuestions: 10,
+            ocationCoords: {
+                lat: 0.0,
+                lng: 0.0
+            }
         }
     }
 
-    onChange(event) {
-        this.setState({location: event.target.value});
+    onChange(e) {
+        console.log(e)
+        // this.setState(inputValue, )
     }
 
     render() {
@@ -32,8 +36,8 @@ class Generation extends Component {
                     <p style={styles.locationPrompt}>City/Town:</p>
                     <TextInput
                         placeHolder="London"
-                        value={this.state.location}
-                        onChange={this.onChange(event)}
+                        value=''
+                        onChange={() => this.onChange)}
                     />
                 </div>
 

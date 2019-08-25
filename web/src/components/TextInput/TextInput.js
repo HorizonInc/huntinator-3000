@@ -4,6 +4,12 @@ import React, { Component } from 'react';
 import styles from './TextInput.style';
 
 class TextInput extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = { message: "Hello World" };
+    }
+
     render() {
         const { placeHolder, value, style = {}, onChange} = this.props;
 
@@ -12,7 +18,7 @@ class TextInput extends Component {
                    type="text" 
                    placeholder={placeHolder}
                    value={value}
-                   onChange={onChange(event)} 
+                   onChange={onChange} 
             />
         )
     }
