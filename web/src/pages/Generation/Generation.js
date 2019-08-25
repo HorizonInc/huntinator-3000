@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 // Components
-import TextInput from '../../components/TextInput';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 // Local Relatives
 import styles from './Generation.style';
@@ -12,6 +13,7 @@ class Generation extends Component {
         super(props);
 
         this.state = {
+            city: "",
             inputValue: "",
             generatedGameId: 0,
             location: "",
@@ -23,24 +25,63 @@ class Generation extends Component {
         }
     }
 
-    onChange(e) {
-        console.log(e)
-        // this.setState(inputValue, )
+    onLocationChange(text_event) {
+        this.setState({city: text_event.target.value});
+    }
+
+    onNumberChange(number_event) {
+        this.setState({numberOfQuestions: number_event.target.value})
+    }
+
+    onGenerate() {
+        let postObject = {
+            number_of_questions: this.state.numberOfQuestions
+        }
+
+        axios.post('http://192.168.1.218:3001/newGame', postObject)
+            .then((response) => {
+                console.log(response);
+            }).catch(e => {
+                console.log(e);
+            })
     }
 
     render() {
         return (
             <div style={styles.container}>
-                <h1 style={styles.title}>Generate New Game</h1>
+                <div style={styles.titleContainer}>
+                    <h1 style={styles.title}>Generate New Game</h1>
+                </div>
                 <div style={styles.inputsContainer}>
-                    <p style={styles.locationPrompt}>City/Town:</p>
-                    <TextInput
-                        placeHolder="London"
-                        value=''
-                        onChange={() => this.onChange)}
+                    <div style={styles.inputContainer}>
+                        <p style={styles.locationPrompt}>City/Town:</p>
+                        <Input
+                            style={styles.locationInput}
+                            type='text'
+                            placeHolder='London'
+                            value={this.state.city}
+                            onChange={(text_event) => this.onLocationChange(text_event)}
+                        />
+                    </div>
+
+                    <div style={styles.inputContainer}>
+                        <p style={styles.locationPrompt}>Number of questions:</p>
+                        <Input
+                            style={styles.locationInput}
+                            type='number'
+                            placeHolder='10'
+                            value={this.state.numberOfQuestions}
+                            onChange={(number_event) => this.onNumberChange(number_event)}
+                        />
+                    </div>
+                </div>
+                <div style={styles.generateButtonContainer}>
+                    <Button
+                        style={styles.generateButton}
+                        onPress={() => this.onGenerate()}
+                        text="Generate!"
                     />
                 </div>
-
             </div>
         );
     }

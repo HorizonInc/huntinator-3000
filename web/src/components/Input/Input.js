@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 // Local relatives
-import styles from './TextInput.style';
+import styles from './Input.style';
 
-class TextInput extends Component {
+class Input extends Component {
     constructor(props) {
         super(props);
 
@@ -11,11 +11,11 @@ class TextInput extends Component {
     }
 
     render() {
-        const { placeHolder, value, style = {}, onChange} = this.props;
+        const { placeHolder, value, style = {}, onChange, type} = this.props;
 
         return(
-            <input style={{...styles.textInput, ...style}} 
-                   type="text" 
+            <input style={{...styles.textInput, ...style}}
+                   type={type} 
                    placeholder={placeHolder}
                    value={value}
                    onChange={onChange} 
@@ -24,4 +24,4 @@ class TextInput extends Component {
     }
 }
 
-export default TextInput;
+export default Input;
